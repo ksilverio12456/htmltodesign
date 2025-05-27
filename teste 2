@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preparatório especializado em carreiras policiais. Método exclusivo com aprovação em menos de 1 ano. Mais de mil alunos aprovados.">
+    <title>EAA Carreiras Policiais - Aprovação em Menos de 1 Ano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset e Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #1A1A1A;
+            background-color: #FFFFFF;
+        }
+        
+        /* Design System - Layout Foundation */
+        .container {
+            display: flex;
+            max-width: 1440px;
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 80px;
+        }
+        
+        .section {
+            width: 100%;
+            padding: 48px 0;
+        }
+        
+        .section-alt {
+            background-color: #F5F5F5;
+        }
+        
+        /* Typography Scale */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 1.75rem);
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+        
+        .lead {
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+        p {
+            font-size: clamp(1rem, 2vw, 1.1rem);
+            margin-bottom: 16px;
+        }
+        
+        .small {
+            font-size: 0.9rem;
+            color: #7A7A7A;
+        }
+        
+        /* CTA Button System */
+        .cta-button {
+            display: inline-block;
+            background-color: #F9A826;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            padding: 24px 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(249, 168, 38, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: 16px 8px;
+        }
+        
+        .cta-button:hover {
+            background-color: #e6931f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 168, 38, 0.4);
+        }
+        
+        .cta-button-large {
+            font-size: 16px;
+            padding: 32px 48px;
+            margin: 24px 8px;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: #F9A826;
+            border: 2px solid #F9A826;
+        }
+        
+        .cta-secondary:hover {
+            background-color: #F9A826;
+            color: #FFFFFF;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 64px 0;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-highlight {
+            background: linear-gradient(135deg, #F9A826, #ffb84d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .video-container {
+            position: relative;
+            max-width: 600px;
+            margin: 32px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .video-thumbnail {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #1A1A1A, #333);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: #F9A826;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .play-button::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+        
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .benefits-list li {
+            position: relative;
+            padding: 16px 0 16px 40px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .benefits-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            color: #F9A826;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        /* Social Proof Grid */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .proof-item {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .proof-item img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 32px 0;
+        }
+        
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #F5F5F5;
+        }
+        
+        .comparison-header div {
+            padding: 24px;
+            font-weight: 700;
+            text-align: center;
+            border-right: 1px solid #E0E0E0;
+        }
+        
+        .comparison-header div:last-child {
+            border-right: none;
+            background: #F9A826;
+            color: white;
+        }
+        
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        .comparison-row div {
+            padding: 20px;
+            border-right: 1px solid #E0E0E0;
+        }
+        
+        .comparison-row div:last-child {
+            border-right: none;
+            background: #f8f9fa;
+        }
+        
+        .comparison-negative {
+            color: #dc3545;
+        }
+        
+        .comparison-positive {
+            color: #28a745;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border-left: 4px solid #F9A826;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #F9A826;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 24px;
+            color: white;
+        }
+        
+        /* Testimonial Cards */
+        .testimonial {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin: 16px;
+            text-align: center;
+        }
+        
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            object-fit: cover;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 16px;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #F9A826;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            background: #F5F5F5;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        .faq-answer {
+            padding: 24px;
+            line-height: 1.6;
+        }
+        
+        /* Guarantee Badge */
+        .guarantee-badge {
+            background: linear-gradient(135deg, #F9A826, #ffb84d);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            margin: 24px auto;
+            max-width: 300px;
+            box-shadow: 0 4px 16px rgba(249, 168, 38, 0.3);
+        }
+        
+        /* Contact Section */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .section {
+                padding: 32px 0;
+            }
+            
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-header div,
+            .comparison-row div {
+                border-right: none;
+                border-bottom: 1px solid #E0E0E0;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .section {
+                padding: 24px 0;
+            }
+            
+            .cta-button {
+                padding: 20px 24px;
+                font-size: 12px;
+            }
+            
+            .cta-button-large {
+                padding: 24px 32px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .mt-32 { margin-top: 32px; }
+        .mb-32 { margin-bottom: 32px; }
+        .highlight { color: #F9A826; font-weight: 600; }
+    </style>
+</head>
+
+<body>
+    <!-- SEÇÃO 1: HERO MAGNET -->
+    <section class="section hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mais de <span class="hero-highlight">1.000 alunos</span> já estão encurtando seus caminhos até a aprovação</h1>
+                
+                <p class="lead">O segredo da aprovação rápida em qualquer carreira policial é mais simples do que parece.</p>
+                
+                <p>Ao assistir à aula abaixo, você vai entender:</p>
+                
+                <ul class="benefits-list">
+                    <li>Os principais erros que sabotam a sua preparação</li>
+                    <li>Como e por quais matérias começar a estudar para ser aprovado em poucos meses — mesmo com uma rotina corrida</li>
+                    <li>O jeito certo para memorizar até 3x mais cada disciplina estudada no dia</li>
+                </ul>
+                
+                
+                
+                <div<div class="video-container">
+                    <div class="video-thumbnail">
+                        <div>
+                            <div class="play-button"></div>
+                            <div>Assista à Aula</div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+<a href="#" class="cta-button cta-button-large">QUERO SER APROVADO EM MENOS DE 1 ANO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: SOCIAL PROOF FOUNDATION -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center">Você não precisa estudar muitos anos para passar — precisa estudar certo. Assim como eles:</h2>
+            
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <div style="width: 100%; height: 200px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                        <span style="color: #7A7A7A;">Depoimento de Aprovado</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 200px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                        <span style="color: #7A7A7A;">Depoimento de Aprovado</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 200px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                        <span style="color: #7A7A7A;">Depoimento de Aprovado</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 200px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                        <span style="color: #7A7A7A;">Depoimento de Aprovado</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div<div class="text-center">
+                <a href="#" class="cta-button cta-button-large">QUERO SER O PRÓXIMO APROVADO JÁ EM 2025</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: UNIQUE METHOD REVEAL -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Aqui, você estuda apenas o que de fato cai na sua prova</h2>
+            
+            <div style="text-align: center; margin: 32px 0;">
+                <p class="lead"><strong>Concurso público é uma fila, e só na EAA: Carreiras Policiais você aprende a furá-la em poucos meses, em vez de ficar anos esperando.</strong></p>
+                
+                <p>Somente o nosso preparatório se preocupa verdadeiramente em te dar ritmo de aprendizado, com um único material completo e refinado para todas as fases do seu concurso, e que caiba na sua rotina.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: DEMONSTRATION PROOF -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center">Vista seu colete à prova de procrastinação</h2>
+            
+            
+            
+<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p class="lead">Os nossos <strong>Cadernos em Poesia</strong> seguem uma formatação especial, diferente de tudo o que existe no mercado.</p>
+                
+                <p>Com eles, a sua leitura fica mais ágil e fácil de compreender e fixar na mente. E o melhor: <strong>não te cansa de ler.</strong></p>
+                
+                <p>Cada disciplina é constantemente atualizada conforme as mais recentes mudanças nos editais, nas leis e na jurisprudência.</p>
+                
+                
+                
+<a href="#" class="cta-button">CONFERIR UMA AMOSTRA GRÁTIS DO CADERNO EM POESIA DE DIREITO ADMINISTRATIVO</a>
+                
+                
+                
+                <h<h3 style="margin-top: 48px;">Com método, seu estudo fica muito mais leve</h3>
+                
+                <div class="testimonial" style="max-width: 600px; margin: 32px auto;">
+                    <p class="testimonial-text">"Prova disso é o nosso aluno que conseguiu ler 70 páginas em 4h de estudos sem se cansar."</p>
+                </div>
+            </div>
+            
+            
+            
+            <h<h3 class="text-center mt-32">E ele não é o único que avançou nos estudos com nossos materiais em PDF…</h3>
+            
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <p class="lead">Mais do que "só" estudar muito, aqui você realmente domina seus estudos, ganha confiança e despacha a ansiedade para longe.</p>
+                
+                
+                
+                <p<p><strong>Mais direção = mais aprovação (e em menos tempo).</strong></p>
+                
+                <a href="#" class="cta-button cta-button-large">QUERO FURAR A FILA DOS CONCURSOS POLICIAIS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: COMPREHENSIVE BENEFITS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Além dos nossos Cadernos em Poesia, você também recebe:</h2>
+            
+            
+            
+<div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>VIDEOAULAS</h3>
+                    <p>Conteúdo pedagógico de todas as matérias com qualidade cinematográfica e com a didática que só a nossa equipe de professores possui. Cada aula é projetada para abranger exatamente os tópicos que frequentemente aparecem nas provas de concursos policiais.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">❓</div>
+                    <h3>QUESTÕES SELECIONADAS</h3>
+                    <p><strong>NADA DE MILHÕES DE QUESTÕES QUE NADA TÊM A VER COM O SEU CONCURSO.</strong></p>
+                    <p>Não perca tempo selecionando questões na internet ou resolvendo questões defasadas. Nosso material inclui uma ampla seleção de questões realmente pertinentes com gabaritos comentados.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>MÓDULO SOB MEDIDA</h3>
+                    <p>Cada concurso tem sua especificidade, por isso temos um módulo com materiais escritos direcionados para as peculiaridades de uma prova de grande interesse que surja no meio das carreiras policiais. Você não vai precisar pagar um único centavo a mais pelo nosso "reta final".</p>
+                </div>
+                
+                
+                
+<div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>GRUPO EXCLUSIVO COM DICAS E ATUALIZAÇÕES</h3>
+                    <p>Um canal exclusivo de informes no Telegram para alunos no qual compartilhamos atualizações sobre concursos, mudanças jurisprudenciais e legislativas, ressaltamos questões importantes e avisamos sobre novos materiais postados na plataforma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<!-- SEÇÃO 6: COMPETITIVE ADVANTAGE -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center">Não existe nada igual no mercado de concursos</h2>
+            
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div>Preparatórios Tradicionais</div>
+                    <div>Escola Até a Aprovação: Carreiras Policiais</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-negative">
+                        ❌ Base de estudos em 3 milhões de questões aleatórias, sem qualquer pertinência ao seu concurso
+                    </div>
+                    <div class="comparison-positive">
+                        ✅ Você estuda com questões selecionadas criteriosamente, para conhecer o perfil específico da banca examinadora do seu concurso
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-negative">
+                        ❌ Vendem um material separado para cada concurso e para cada fase, como os cursinhos de reta final
+                    
+                        ❌ Vendem um material separado para cada concurso e para cada fase, como os cursinhos de reta final
+</div>
+                    <div class="comparison-positive">
+                        ✅ Não precisa gastar um único centavo a mais em cursinhos de reta final, ou com um preparatório para cada concurso
+                    
+                        ✅ Não precisa gastar um único centavo a mais em cursinhos de reta final, ou com um preparatório para cada concurso
+</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-negative">
+                        ❌ Complicam a memorização dos estudos com múltiplas técnicas prolixas ao mesmo tempo
+                    </div>
+                    <div class="comparison-positive">
+                        ✅ Você recebe materiais enxutos e de fácil compreensão, agilizando a sua leitura e múltiplas revisões
+                    
+                        ✅ Você recebe materiais enxutos e de fácil compreensão, agilizando a sua leitura e múltiplas revisões
+</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-negative">
+                        ❌ Cronogramas padronizados que não cabem na sua rotina
+                    
+                        ❌ Cronogramas padronizados que não cabem na sua rotina
+</div>
+                    <div class="comparison-positive">
+                        ✅ Cronograma individualizado que faça sentido para te fazer avançar mais rapidamente em cada matéria
+                    
+                        ✅ Cronograma individualizado que faça sentido para te fazer avançar mais rapidamente em cada matéria
+</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-negative">
+                        ❌ Preços elevados do mercado de concursos
+                    </div>
+                    <div class="comparison-positive">
+                        ✅ Custo-benefício inigualável em relação à média de preços do mercado de concursos no Brasil
+                    
+                        ✅ Custo-benefício inigualável em relação à média de preços do mercado de concursos no Brasil
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 7: IDEAL CUSTOMER MIRROR -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Não importa se você trabalha o dia todo ou tem mais tempo livre; a Escola Até a Aprovação: Carreiras Policiais vai encurtar seu caminho até a aprovação</h2>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h3>Nosso preparatório é perfeito para você que:</h3>
+                
+                <ul class="benefits-list">
+                    <li>Nunca fez concursos e não sabe como nem por onde começar</li>
+                    <li>Tem inúmeras responsabilidades como pai ou mãe de família</li>
+                    <li>Não quer passar novamente pela dor da reprovação</li>
+                </ul>
+            </div>
+            
+            <div class="proof-grid" style="margin-top: 48px;">
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+                <div class="proof-item">
+                    <div style="width: 100%; height: 150px; background: #E0E0E0; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #7A7A7A;">Depoimento</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-32">
+                <a href="#" class="cta-button cta-button-large">A EAA: CARREIRAS POLICIAIS É PARA MIM</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 8: URGENCY SCARCITY ENGINE -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Nunca houve tantas oportunidades de concursos na área policial como agora</h2>
+                
+                <p class="lead">Essa é a sua melhor chance de conquistar a estabilidade e o salário que sempre sonhou para o resto da sua vida.</p>
+                
+                
+                
+<div style="background: linear-gradient(135deg, #F9A826, #ffb84d); color: white; padding: 32px; border-radius: 16px; margin: 32px 0;">
+                    <h3 style="margin-bottom: 16px;">⏰ OPORTUNIDADE LIMITADA</h3>
+                    <p>Os editais estão saindo e as vagas estão sendo preenchidas por quem está preparado AGORA. Não deixe para depois!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 9: TRUST SUPPORT BRIDGE -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Converse com um especialista do nosso time</h2>
+            
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p class="lead">Temos uma equipe especialmente focada para tirar todas as suas dúvidas e te auxiliar prontamente a tomar a melhor decisão para o seu futuro.</p>
+                
+                
+                
+                <div<div class="contact-options">
+                    <a href="#" class="cta-button cta-secondary">CHAMAR NO WHATSAPP</a>
+                    <a href="#" class="cta-button">FINALIZAR A MINHA MATRÍCULA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 10: RISK REVERSAL GUARANTEE -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2>Experimente gratuitamente por 7 dias!</h2>
+                
+                
+                
+                <div<div class="guarantee-badge">
+                    🛡️ 7 DIAS DE GARANTIA
+                </div>
+                
+                <p>Você pode testar todo o conteúdo da plataforma da Escola Até a Aprovação: Carreiras Policiais por 7 dias e se, por algum motivo, achar que não é para você, basta enviar um e-mail e devolvemos todo seu investimento sem burocracia alguma.</p>
+                
+                
+                
+<a href="#" class="cta-button cta-button-large">QUERO FAZER O TESTE GRÁTIS POR 1 SEMANA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 11: AUTHORITY CREDIBILITY -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Conheça os fundadores do preparatório mais objetivo do mercado no país</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px; margin: 32px 0;">
+                <div class="feature-card">
+                    <h3>José Roberto Mello Porto</h3>
+                    <p><strong>Defensor Público aprovado em 3 concursos públicos</strong> da Defensoria Pública Estadual no Paraná, Rio Grande do Sul e Rio de Janeiro (dentre eles 2 com aprovação em 1º lugar na fase oral).</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Vitor Becker</h3>
+                    <p><strong>Delegado de Polícia, aprovado em 3 concursos de Delegado</strong>, (dentre eles, aprovado em apenas 7 meses de estudos em SP e MG, e no RJ em 10º lugar).</p>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>Juntos, com o objetivo fazer uma verdadeira renovação neste mercado com enfoque nas carreiras policiais, resolveram fundar a Escola Até a Aprovação: Carreiras Policiais.</p>
+                
+                <p>Trata-se da preparação mais direta ao ponto, com suporte completo para você que tem o sonho de portar um distintivo da Polícia Federal, Civil, Legislativa, ou Penal.</p>
+                
+                
+                
+                <p<p><strong>Nosso objetivo é mudar o cenário dos cursos que existem no mercado para ajudar pessoas como você, que não tem todo o tempo do mundo disponível, mas deseja conquistar a tão sonhada aprovação no cargo policial mais rapidamente, em menos de 1 ano.</strong></p>
+                
+                <a href="#" class="cta-button cta-button-large">QUERO BUSCAR A MINHA APROVAÇÃO EM MENOS DE 1 ANO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 12: FAQ -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center">Perguntas Frequentes</h2>
+            
+            
+            
+            <div<div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">Qual a diferença entre os cursos da Escola Até a Aprovação?</div>
+                    <div class="faq-answer">
+                        <p>A Escola Até a Aprovação é composta por 3 preparatórios com focos em concursos públicos distintos:</p>
+                        <ul>
+                            <li><strong>Carreiras Jurídicas:</strong> focado em concursos jurídicos e carreiras de tribunais</li>
+                            <li><strong>DELTA:</strong> preparação exclusiva para Delegado de Polícia</li>
+                            <li><strong>Carreiras Policiais:</strong> foco nos concursos de áreas policiais em geral</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">A EAA: Carreiras Policiais é adequada para concurseiros iniciantes?</div>
+                    <div class="faq-answer">
+                        <p>Sem dúvidas! A Escola até a Aprovação: Carreiras Policiais é ideal tanto para iniciantes nos concursos quanto para quem já está nessa jornada há um tempo. Ela foi projetada para qualquer nível de experiência.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">É possível estudar apenas com os Cadernos em Poesia?</div>
+                    <div class="faq-answer">
+                        <p>Sim! Inclusive, é indicado que se faça isso para ganhar mais tempo de leitura e revisão. Nossos Cadernos em Poesia são exatamente o que você encontra nas aulas de vídeo e são constantemente atualizados.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Dá para estudar trabalhando o dia todo na CLT?</div>
+                    <div class="faq-answer">
+                        <p>Nós entendemos bem essa situação. A EAA Carreiras Policiais foi feita exatamente para te ajudar nisso. Nosso método organiza seus estudos que podem ser feitos em 2-3 horas por dia, com videoaulas objetivas e materiais diretos ao ponto que cabem na sua vida.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Quais concursos a EAA: Carreiras Policiais abrange?</div>
+                    <div class="faq-answer">
+                        <p>Abrangemos: <strong>Polícia Civil</strong> (Inspetor, Agente, Escrivão, Investigador), <strong>Polícia Federal</strong> (Perito Criminal, Agente Administrativo, Agente da PF, PRF, Agente Federal de Execução Penal), <strong>Polícia Legislativa</strong>, <strong>Polícia Penal</strong> e <strong>DETRAN</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-32">
+                <p>Não encontrou resposta para a sua dúvida? <strong>suporte@ateaprovacaoescola.com.br</strong></p>
+                <a href="#" class="cta-button cta-button-large">QUERO FINALIZAR A MINHA MATRÍCULA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #1A1A1A; color: white; padding: 32px 0; text-align: center;">
+        <div class="container">
+            <p class="small">© 2024 Escola Até a Aprovação: Carreiras Policiais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Toggle current answer
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+
+        // Video thumbnail click
+        document.querySelector('.video-thumbnail').addEventListener('click', () => {
+            alert('Aqui seria reproduzido o vídeo de vendas');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
